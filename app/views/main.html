@@ -1,0 +1,11 @@
+<div class="dropdown row" ng-repeat="section in main.menu track by $index">
+    <div class="columns small-12">
+        <a class="dropdown__header" ng-click="main.dropTheBeat($index)">{{section.title}}</a>
+        <hr>
+    </div>
+    <div class="columns small-12">
+        <ul class="dropdown__content" ng-show="main.state===$index">
+            <li class="dropdown__content__item" ng-repeat="item in section.items">{{item}}<hr></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "praksis",
+  "version": "1.0.0",
+  "description": "oles hjemmeside",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mcabe",
+  "license": "ISC"
+}
