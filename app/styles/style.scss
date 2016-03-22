@@ -1,45 +1,13 @@
 * {
   box-sizing: border-box;
 }
-[ui-view="parent"] {
-  width: 500px;
-  border: 1px solid;
-  clear: both;
-  overflow: auto;
+p, a, div, h1, h2, h3, h4, h5, h6 {
+  font-family: monospace, sans-serif;
 }
 
-[ui-view="left"],
-[ui-view="right"] {
-  width: 248px;
-  border: 1px solid;
-  float: left;
-  &:empty {
-    visibility: hidden;
-  }
-}
-
-[ui-view="left"] {
-  border-color: red;
-}
-[ui-view="right"] {
-  border-color: green;
-}
-.dropdown{
-  &__header{
-    color:blue;
-    float:left;
-    text-transform: uppercase;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  &__content {
-    margin:10px 0 0 0;
-    list-style: none;
-    padding: 0 !important;
-    &__item{
-      //float:left;
-      margin-left: 0;
-    }
+#content {
+  @include breakpoint(large) {
+    margin-top: 11rem;
+    margin-left: 1.25rem;
   }
 }

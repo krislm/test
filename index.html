@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" resize>
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Praksis</title>
     <script>document.write('<base href="' + document.location + '" />');</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
@@ -14,9 +15,9 @@
     <script src="app/app.js"></script>
 </head>
 
-<body>
+<body resize>
     <div ui-view="topbar"></div>
-    <div ui-view="container"></div>
+    <div id="content" ui-view="container"></div>
 </body>
 
 </html>
