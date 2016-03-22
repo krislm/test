@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "oles hjemmeside",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "foundation-sites": "^6.2.0"
+  },
   "devDependencies": {
     "gulp-sass": "^2.2.0"
   },
