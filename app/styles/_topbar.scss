@@ -4,6 +4,7 @@
 	left: 0;
 	background-color: #6f00ff;
 	width:10rem;
+	z-index: 2;
 	@include breakpoint(large) {
 		top: 0;
 	}
@@ -16,6 +17,9 @@
 			a {
 				color: white;
 				&:hover {
+					text-decoration: underline;
+				}
+				&.active {
 					text-decoration: underline;
 				}
 			}

@@ -1,1 +1,21 @@
-<p>options view</p>
+<div class="row">
+    <div class="columns small-10 small-centered medium-8 medium-centered large-6">
+
+        <div ng-repeat="option in options.optionsList track by $index"
+             class="custom-accordion"
+             ng-class="{'active' : option.active}"
+             ng-click="option.active = !option.active">
+
+            <div class="custom-accordion__header">
+                <div class="custom-accordion__title">
+                    <a>{{option.title}}</a>
+                </div>
+                <div class="custom-accordion__icon"
+                     ng-class="{'active' : option.active}"></div>
+            </div>
+            <div ng-show="option.active"
+                 class="custom-accordion__text">{{option.text}}</div>
+        </div>
+
+    </div>
+</div>

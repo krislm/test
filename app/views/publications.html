@@ -1,1 +1,15 @@
-<p>publications view</p>
+<div class="row">
+    <div class="columns small-10 small-centered medium-8 medium-centered large-6">
+        <div class="publications-item" ng-repeat="publication in publications.publicationsList track by $index">
+            <div>
+                <div class="publications-item__title">
+                    <b>{{publication.title}}</b>
+                </div>
+                <div class="publications-item__info">
+                    {{publication.journal}} {{publication.year}}
+                </div>
+            </div>
+            <div class="publications-item__icon"></div>
+        </div>
+    </div>
+</div>

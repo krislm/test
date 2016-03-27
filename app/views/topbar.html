@@ -6,7 +6,7 @@
 <div class="nav-container" ng-class="{'show-for-large' : topbar.showMenu}">
     <ul class="nav-container__menu">
         <li class="nav-container__menu--item" ng-repeat="link in topbar.links track by $index">
-            <a ng-click="topbar.showMenu=false" ui-sref="{{link.url}}">{{link.name}}</a>
+            <a ng-click="topbar.showMenuFunc(link.name)" ng-class="{'active' : link.active}" ui-sref="{{link.url}}">{{link.name}}</a>
         </li>
     </ul>
 </div>

@@ -3465,18 +3465,92 @@ p, a, div, h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 64em) {
   #content {
-    margin-top: 11rem;
+    margin-top: 10rem;
     margin-left: 1.25rem; } }
 
 body {
   background-color: #f0e5ff; }
+
+.home-photo__image {
+  width: 200px; }
+  @media screen and (min-width: 64em) {
+    .home-photo__image {
+      width: 400px; } }
+  @media screen and (min-width: 40em) {
+    .home-photo__image {
+      width: 300px; } }
+
+.home-show-more {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: grey;
+  background-image: url("./assets/ic_arrow_downward_white_24dp_2x.png");
+  background-repeat: no-repeat;
+  cursor: pointer; }
+  .home-show-more p {
+    color: white; }
+  .home-show-more:hover {
+    background-color: darkgrey; }
+
+.publications-item {
+  margin-bottom: 10px;
+  display: flex; }
+  .publications-item:hover {
+    cursor: pointer; }
+    .publications-item:hover .publications-item__title {
+      text-decoration: underline; }
+  .publications-item__icon {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    background-image: url("./assets/ic_arrow_downward_white_24dp_2x.png");
+    background-repeat: no-repeat;
+    cursor: pointer; }
+    .publications-item__icon:not(.noaccess) {
+      transform: rotate(270deg); }
+    .publications-item__icon.noaccess {
+      border-radius: 50%;
+      background-color: grey;
+      background-image: url("./assets/ic_close_white_24dp_1x.png"); }
+
+.custom-accordion__header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer; }
+
+.custom-accordion__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .custom-accordion__title a {
+    color: #6f00ff; }
+
+.custom-accordion__icon {
+  height: 50px;
+  width: 50px;
+  background-image: url("./assets/ic_navigate_next_white_24dp_2x.png");
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  background-position: center;
+  align-self: center; }
+  .custom-accordion__icon.active {
+    transform: rotate(270deg); }
+
+.custom-accordion__text {
+  color: darkgrey; }
 
 .nav-container {
   position: fixed;
   top: 25px;
   left: 0;
   background-color: #6f00ff;
-  width: 10rem; }
+  width: 10rem;
+  z-index: 2; }
   @media screen and (min-width: 64em) {
     .nav-container {
       top: 0; } }
@@ -3488,6 +3562,8 @@ body {
     .nav-container__menu--item a {
       color: white; }
       .nav-container__menu--item a:hover {
+        text-decoration: underline; }
+      .nav-container__menu--item a.active {
         text-decoration: underline; }
 
 .title-bar-title {
