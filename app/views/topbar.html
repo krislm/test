@@ -1,0 +1,13 @@
+<div class="mobile-menu hide-for-large" ng-click="topbar.showMenu = !topbar.showMenu">
+    <div class="title-bar-title">Menu</div>
+    <div class="mobile-menu__close hide-for-large" ng-hide="topbar.showMenu"></div>
+</div>
+
+<div class="nav-container" ng-class="{'show-for-large' : topbar.showMenu}">
+    <ul class="nav-container__menu">
+        <li class="nav-container__menu--item" ng-repeat="link in topbar.links track by $index">
+            <a ng-click="topbar.showMenuFunc(link.name)" ng-class="{'active' : link.active}" ui-sref="{{link.url}}">{{link.name}}</a>
+        </li>
+    </ul>
+</div>
+

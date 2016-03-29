@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+p, a, div, h1, h2, h3, h4, h5, h6 {
+  font-family: monospace, sans-serif;
+}
+
+#content {
+  @include breakpoint(large) {
+    margin-top: 10rem;
+    margin-left: 1.25rem;
+  }
+
+}
+body {
+  background-color:#f0e5ff;
+}
+
+// HOME
+.home-photo {
+	&__image {
+		@include breakpoint(large) {
+			width: 400px;
+		}
+		@include breakpoint(medium) {
+			width: 300px;
+		}
+		@include breakpoint(small) {
+			width: 200px;
+		}
+	}
+}
+.home-show-more {
+	position: absolute;
+	//display: flex;
+	//flex-direction: row;
+	//justify-content: center;
+	//align-content: center;
+	//align-items: center;
+	top: 75%;
+	left: 50%;
+	//width: 70px;
+	//height: 70px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: grey;
+	background-image: url("./assets/ic_arrow_downward_white_24dp_2x.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+
+	p {
+		//margin-left: auto;
+		//margin-right: auto;
+		color: white;
+		//align-self: center;
+	}
+	&:hover {
+		background-color: darkgrey;
+	}
+}
+
+// OPTIONS
+
+// ABOUT
+
+// PUBLICATIONS
+.publications-item {
+	margin-bottom: 10px;
+	display: flex;
+	&:hover {
+		cursor: pointer;
+		.publications-item__title {
+			text-decoration: underline;
+		}
+	}
+	&__title {
+
+	}
+	&__info {
+
+	}
+	&__icon {
+		align-self: center;
+		width: 80px;
+		height: 80px;
+		background-image: url("./assets/ic_arrow_downward_white_24dp_2x.png");
+		background-repeat: no-repeat;
+		cursor: pointer;
+		&:not(.noaccess) {
+			transform: rotate(270deg);
+		}
+		&.noaccess {
+			border-radius: 50%;
+			background-color: grey;
+			background-image: url("./assets/ic_close_white_24dp_1x.png");
+		}
+	}
+}
+
+// SHARED
+.custom-accordion {
+	&__header {
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		cursor: pointer;
+		&:hover {
+			//background-color: darkgrey;
+		}
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		a {
+			color: #6f00ff;
+		}
+	}
+	&__icon {
+		height: 50px;
+		width: 50px;
+		background-image: url("./assets/ic_navigate_next_white_24dp_2x.png");
+		background-repeat: no-repeat;
+		transform: rotate(90deg);
+		background-position: center;
+		align-self: center;
+		&.active {
+			transform: rotate(270deg);
+		}
+	}
+	&__text {
+		color: darkgrey;
+	}
+}

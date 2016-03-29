@@ -1,0 +1,54 @@
+.nav-container {
+	position:fixed;
+	top: 25px;
+	left: 0;
+	background-color: #6f00ff;
+	width:10rem;
+	z-index: 2;
+	@include breakpoint(large) {
+		top: 0;
+	}
+	&__menu {
+		list-style: none;
+		margin-right: 1.25rem;
+		margin-top: 1rem;
+		height:7rem;
+		&--item {
+			a {
+				color: white;
+				&:hover {
+					text-decoration: underline;
+				}
+				&.active {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.title-bar-title {
+	color: white;
+}
+.mobile-menu {
+	display: flex !important;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #6f00ff;
+	&:hover {
+		cursor: pointer;
+	}
+	.title-bar-title {
+		margin-left: 1.25rem;
+	}
+	&__close {
+		margin-right: 1.25rem;
+		background-image: url("./assets/ic_close_white_24dp_1x.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height:24px;
+		width: 24px;
+	}
+	.meni-icon:hover {
+		background-color: gray !important;
+	}
+}

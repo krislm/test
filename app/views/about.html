@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="columns small-10 small-centered medium-8 medium-centered large-6">
+
+        <div ng-repeat="aboutItem in about.aboutList track by $index"
+             class="custom-accordion"
+             ng-class="{'active' : aboutItem.active}"
+             ng-click="aboutItem.active = !aboutItem.active">
+
+            <div class="custom-accordion__header">
+                <div class="custom-accordion__title">
+                    <a>{{aboutItem.title}}</a>
+                </div>
+                <div class="custom-accordion__icon"
+                     ng-class="{'active' : aboutItem.active}"></div>
+            </div>
+
+            <div ng-show="aboutItem.active"
+                 class="custom-accordion__text">{{aboutItem.text}}</div>
+        </div>
+
+    </div>
+</div>
