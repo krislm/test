@@ -6,61 +6,144 @@ p, a, div, h1, h2, h3, h4, h5, h6 {
 }
 
 #content {
+	@include breakpoint(small) {
+		padding-top: 5rem;
+	}
   @include breakpoint(large) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 1.25rem;
   }
 
 }
 body {
-  background-color:#f0e5ff;
+  background-color: $primary-color-background;
 }
 
 // HOME
-.home-intro {
-
-}
-
-.home-photo {
-	&__image {
-		@include breakpoint(large) {
-			width: 400px;
+@keyframes expandText {
+	from {
+		width: 100%;
+		//position: relative;
+		.home-photo {
+		//	width: 20%;
+		//	margin-left: auto;
+		//	margin-right: auto;
+		//	margin-bottom: 1rem;
+		//	&__image {
+		//		@include breakpoint(large) {
+		//			width: 400px;
+		//		}
+		//		@include breakpoint(medium) {
+		//			width: 300px;
+		//		}
+		//		@include breakpoint(small) {
+		//			width: 200px;
+		//		}
+		//	}
 		}
-		@include breakpoint(medium) {
-			width: 300px;
+		p {
+			text-align: center;
 		}
-		@include breakpoint(small) {
-			width: 200px;
+	}
+	to {
+		//display: flex !important;
+		//flex-direction: row !important;
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		.home-photo {
+			margin-left: 0 !important;
+			margin-right: 1rem !important;
+			&__image {
+				height: auto;
+				width: 200px !important;
+			}
+		}
+		p {
+			text-align: left;
 		}
 	}
 }
+
+@keyframes contractText {
+	from {
+
+	}
+	to {
+
+	}
+}
+
+.home-intro {
+	.home-photo {
+		width: 20%;
+		margin-left: auto;
+		margin-right: auto;
+
+		margin-bottom: 1rem;
+		&__image {
+			@include breakpoint(large) {
+				width: 400px;
+			}
+			@include breakpoint(medium) {
+				width: 300px;
+			}
+			@include breakpoint(small) {
+				width: 200px;
+			}
+		}
+	}
+
+	&.expanded {
+		animation: 0.5s expandText linear forwards;
+		display: flex !important;
+		flex-direction: row !important;
+	}
+
+	&.contracted {
+		animation: 0.5s contractText linear forwards;
+	}
+
+}
+
+@keyframes rotateExpandMore {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(180deg);
+	}
+}
+@keyframes rotateExpandLess {
+	from {
+		transform: rotate(-180deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
 .home-show-more {
-	position: absolute;
-	//display: flex;
-	//flex-direction: row;
-	//justify-content: center;
-	//align-content: center;
-	//align-items: center;
-	top: 75%;
-	left: 50%;
-	//width: 70px;
-	//height: 70px;
+	position: fixed;
+	top: 60%;
+	right: 10%;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: grey;
-	background-image: url("./assets/ic_arrow_downward_white_24dp_2x.png");
+	background-color: $secondary-color-background;
+	background-image: url("./assets/ic_expand_more_black_24px.svg");
 	background-repeat: no-repeat;
+	background-position: center;
 	cursor: pointer;
-
-	p {
-		//margin-left: auto;
-		//margin-right: auto;
-		color: white;
-		//align-self: center;
-	}
+	//transition: .3s ease-in-out;
 	&:hover {
-		background-color: darkgrey;
+		background-color: $primary-color-highlight;
+	}
+	&.expanded {
+		animation: 0.5s rotateExpandMore linear forwards;
+	}
+	&.contracted {
+		animation: 0.5s rotateExpandLess linear forwards;
 	}
 }
 
@@ -118,7 +201,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		a {
-			color: #6f00ff;
+			color: $primary-color-green;
 		}
 	}
 	&__icon {

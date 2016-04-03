@@ -1,36 +1,17 @@
-<div class="home-intro">
-    <div class="home-photo"
-         ng-class="{'small-12 medium-10 medium-centered large-4 large-centered' : !main.expandText,
-                           'small-6 medium-3 medium-centered' : main.expandText}">
+<div class="home-intro"
+     ng-class="(main.expandText ? 'expanded' : 'contracted')">
+    <div class="home-photo">
         <img class="home-photo__image" src="dist/assets/olefoto.jpg" alt="olefoto">
     </div>
-    <p>Velkommen – på de følgende sider kan du læse om mig og mine tilbud.</p>
-    <p>Jeg er cand. psych., autoriseret psykolog, godkendt specialist og supervisor. Jeg er medlem af Dansk Psykologforening.</p>
-</div>
-<!--<div class="row"><!--columns small-12 medium-10 medium-centered large-4 large-centered-->
-    <!--<div class="home-photo"
-            ng-class="{'small-12 medium-10 medium-centered large-4 large-centered' : !main.expandText,
-                       'small-6 medium-3 medium-centered' : main.expandText}">
-        <img class="home-photo__image" src="dist/assets/olefoto.jpg" alt="olefoto">
-    </div>-->
-    <!--<div class="columns small-6 medium-6" ng-show="main.expandText">
-        <p>Jeg er cand. psych., autoriseret psykolog, godkendt specialist og supervisor. Jeg er medlem af Dansk Psykologforening.</p>
-    </div>-->
-<!--</div>&ndash;&gt;-->
-<!--<div class="row">
-    <div class="home-intro columns small-10 small-centered medium-8 medium-centered large-6">
-        <p>Velkommen – på de følgende sider kan du læse om mig og mine tilbud.</p>
+    <p>Velkommen – på de følgende sider kan du læse om mig og mine tilbud.</br>
+    Jeg er cand. psych., autoriseret psykolog, godkendt specialist og supervisor. Jeg er medlem af Dansk Psykologforening.</p>
+    <div ng-click="main.expandText = !main.expandText"
+         ng-class="(main.expandText ? 'expanded' : 'contracted')"
+         class="home-show-more">
     </div>
 </div>
-<div class="row">
-    <div class="home-intro columns small-10 small-centered medium-8 medium-centered large-6">
-        <p>Jeg er cand. psych., autoriseret psykolog, godkendt specialist og supervisor. Jeg er medlem af Dansk Psykologforening.</p>
-    </div>
-</div>-->
 
-<div ng-click="main.expandText = true" ng-hide="main.expandText" class="home-show-more">
-    <!--<p>læs mere</p>-->
-</div>
+
 
 <div ng-show="main.expandText" class="home-text-section">
     <div class="row">

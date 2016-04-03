@@ -71,14 +71,12 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 app.controller('TopbarCtrl', function($scope, $window) {
     var vm = this;
-
-    vm.isScreenLarge = isScreenLarge;
-
+	
     vm.links = [
-        {name: 'forside', url:'root.home', active: true},
-        {name: 'tilbud', url: 'root.options', active: false},
-        {name: 'om mig', url:'root.about', active: false},
-        {name: 'publikationer', url:'root.publications', active: false}
+        {name: 'FORSIDE', url:'root.home', active: true},
+        {name: 'TILBUD', url: 'root.options', active: false},
+        {name: 'OM MIG', url:'root.about', active: false},
+        {name: 'PUBLIKATIONER', url:'root.publications', active: false}
     ];
     vm.showMenu = false;
     vm.showMenuFunc = showMenuFunc;
@@ -93,19 +91,9 @@ app.controller('TopbarCtrl', function($scope, $window) {
     }
 
     function init() {
-        isScreenLarge();
-        $scope.$on('resize::resize', function() {
-            isScreenLarge();
-        });
+       
     }
 
-    function isScreenLarge() {
-        if ($window.innerWidth >= 1024) {
-            vm.showMenu = true;
-        } else {
-            vm.showMenu = false;
-        }
-    }
 });
 
 app.controller('MainCtrl', function($scope) {

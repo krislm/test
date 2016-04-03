@@ -1,13 +1,34 @@
-<div class="mobile-menu hide-for-large" ng-click="topbar.showMenu = !topbar.showMenu">
-    <div class="title-bar-title">Menu</div>
-    <div class="mobile-menu__close hide-for-large" ng-hide="topbar.showMenu"></div>
+<div class="topbar__header"
+     ng-click="topbar.showMenu = !topbar.showMenu"
+     ng-click="topbar.showMenu = !topbar.showMenu">
+    <div id="nav-icon"
+         class="hide-for-medium"
+         ng-class="{'open': topbar.showMenu}">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="items show-for-large-only">
+        <a ng-click="topbar.showMenuFunc(link.name)"
+           ng-repeat="link in topbar.links track by $index"
+           ng-class="{'active' : link.active}"
+           ui-sref="{{link.url}}">
+           {{link.name}}
+        </a>
+    </div>
 </div>
 
-<div class="nav-container" ng-class="{'show-for-large' : topbar.showMenu}">
+<div class="topbar__menu-mobile hide-for-medium"
+     ng-class="{'open': topbar.showMenu}">
     <ul class="nav-container__menu">
-        <li class="nav-container__menu--item" ng-repeat="link in topbar.links track by $index">
-            <a ng-click="topbar.showMenuFunc(link.name)" ng-class="{'active' : link.active}" ui-sref="{{link.url}}">{{link.name}}</a>
+        <li class="nav-container__menu--item"
+            ng-repeat="link in topbar.links track by $index">
+            <a ng-click="topbar.showMenuFunc(link.name)"
+               ng-class="{'active' : link.active}"
+               ui-sref="{{link.url}}">
+                {{link.name}}
+            </a>
         </li>
     </ul>
 </div>
-
