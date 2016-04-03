@@ -17,6 +17,10 @@ body {
 }
 
 // HOME
+.home-intro {
+
+}
+
 .home-photo {
 	&__image {
 		@include breakpoint(large) {
