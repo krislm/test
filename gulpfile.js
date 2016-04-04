@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
@@ -19,6 +20,10 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function () {
     return gulp.src('app/styles/main.scss')
         .pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
         .pipe(gulp.dest('dist/'))
         .pipe(browserSync.stream());
 });
