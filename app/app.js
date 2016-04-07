@@ -16,7 +16,10 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                     templateUrl: 'app/views/topbar.html',
                     controller: 'TopbarCtrl',
                     controllerAs: 'topbar'
-                }
+                },
+				'footer': {
+					templateUrl: 'app/views/footer.html'
+				}
             }
         })
         .state({

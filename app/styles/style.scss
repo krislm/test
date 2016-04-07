@@ -6,14 +6,14 @@ p, a, div, h1, h2, h3, h4, h5, h6 {
 }
 
 #content {
-	@include breakpoint(small) {
-		padding-top: 5rem;
-	}
-  @include breakpoint(large) {
-    margin-top: 5rem;
-    margin-left: 1.25rem;
-  }
-
+		@include breakpoint(small) {
+			padding-top: 5rem;
+		}
+	  @include breakpoint(large) {
+		margin-top: 5rem;
+		margin-left: 1.25rem;
+	  }
+	padding-bottom: 4rem;
 }
 body {
   background-color: $primary-color-background;
