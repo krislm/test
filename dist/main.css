@@ -3560,54 +3560,7 @@ p, a, div, h1, h2, h3, h4, h5, h6 {
 body {
   background-color: #e7ede7; }
 
-@-webkit-keyframes expandText {
-  from {
-    width: 100%;
-    .home-photo { }
-    p {
-      text-align: center; } }
-  to {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    .home-photo {
-      margin-left: 0 !important;
-      margin-right: 1rem !important;
-      __image {
-        height: auto;
-        width: 200px !important; } }
-    p {
-      text-align: left; } } }
-
-@keyframes expandText {
-  from {
-    width: 100%;
-    .home-photo { }
-    p {
-      text-align: center; } }
-  to {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    .home-photo {
-      margin-left: 0 !important;
-      margin-right: 1rem !important;
-      __image {
-        height: auto;
-        width: 200px !important; } }
-    p {
-      text-align: left; } } }
-
-@-webkit-keyframes contractText {
-  from { }
-  to { } }
-
-@keyframes contractText {
-  from { }
-  to { } }
-
 .home-intro .home-photo {
-  width: 20%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem; }
@@ -3620,19 +3573,29 @@ body {
       .home-intro .home-photo__image {
         width: 300px; } }
 
-.home-intro.expanded {
-  -webkit-animation: 0.5s expandText linear forwards;
-  animation: 0.5s expandText linear forwards;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-flex-direction: row !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important; }
-
-.home-intro.contracted {
-  -webkit-animation: 0.5s contractText linear forwards;
-  animation: 0.5s contractText linear forwards; }
+.portrait {
+  background-image: url("./assets/olefoto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: grey;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%; }
+  @media screen and (max-width: 39.9375em) {
+    .portrait {
+      height: 200px;
+      width: 200px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 40em) {
+    .portrait {
+      height: 400px;
+      width: 400px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto; } }
 
 @-webkit-keyframes rotateExpandMore {
   from {
@@ -3766,7 +3729,6 @@ body {
   background-color: #185113;
   z-index: 2; }
   .topbar__header .items {
-    width: 40%;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -3778,6 +3740,12 @@ body {
     align-content: space-between;
     padding-top: 1rem;
     padding-left: 1rem; }
+    @media screen and (min-width: 64em) {
+      .topbar__header .items {
+        width: 40%; } }
+    @media screen and (max-width: 63.9375em) {
+      .topbar__header .items {
+        width: 60%; } }
     .topbar__header .items a {
       color: #e7ede7; }
       .topbar__header .items a:hover {

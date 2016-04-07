@@ -9,7 +9,12 @@
 		background-color: $primary-color-green;
 		z-index: 2;
 		.items {
-			width: 40%;
+			@include breakpoint(large) {
+				width: 40%;
+			}
+			@include breakpoint(medium down) {
+				width:60%;
+			}
 			display: flex;
 			justify-content: space-between;
 			align-content: space-between;

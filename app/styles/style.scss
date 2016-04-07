@@ -20,63 +20,10 @@ body {
 }
 
 // HOME
-@keyframes expandText {
-	from {
-		width: 100%;
-		//position: relative;
-		.home-photo {
-		//	width: 20%;
-		//	margin-left: auto;
-		//	margin-right: auto;
-		//	margin-bottom: 1rem;
-		//	&__image {
-		//		@include breakpoint(large) {
-		//			width: 400px;
-		//		}
-		//		@include breakpoint(medium) {
-		//			width: 300px;
-		//		}
-		//		@include breakpoint(small) {
-		//			width: 200px;
-		//		}
-		//	}
-		}
-		p {
-			text-align: center;
-		}
-	}
-	to {
-		//display: flex !important;
-		//flex-direction: row !important;
-		width: 50%;
-		margin-left: auto;
-		margin-right: auto;
-		.home-photo {
-			margin-left: 0 !important;
-			margin-right: 1rem !important;
-			&__image {
-				height: auto;
-				width: 200px !important;
-			}
-		}
-		p {
-			text-align: left;
-		}
-	}
-}
 
-@keyframes contractText {
-	from {
-
-	}
-	to {
-
-	}
-}
 
 .home-intro {
 	.home-photo {
-		width: 20%;
 		margin-left: auto;
 		margin-right: auto;
 
@@ -94,16 +41,33 @@ body {
 		}
 	}
 
-	&.expanded {
-		animation: 0.5s expandText linear forwards;
-		display: flex !important;
-		flex-direction: row !important;
-	}
 
-	&.contracted {
-		animation: 0.5s contractText linear forwards;
-	}
+}
 
+.portrait {
+
+	background-image: url("./assets/olefoto.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	background-color: grey;
+	@include breakpoint(small only) {
+		height: 200px;
+		width: 200px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include breakpoint(medium) {
+		height: 400px;
+		width: 400px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
 }
 
 @keyframes rotateExpandMore {
