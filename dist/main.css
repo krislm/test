@@ -3550,7 +3550,8 @@ p, a, div, h1, h2, h3, h4, h5, h6 {
   font-family: monospace, sans-serif; }
 
 #content {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  padding-bottom: 4rem; }
   @media screen and (min-width: 64em) {
     #content {
       margin-top: 5rem;
@@ -3862,3 +3863,11 @@ body {
             text-decoration: underline; }
           .topbar__menu-mobile .nav-container__menu--item a.active {
             text-decoration: underline; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #185113;
+  width: 100%;
+  height: 3rem; }
