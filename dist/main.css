@@ -3870,4 +3870,14 @@ body {
   left: 0;
   background-color: #185113;
   width: 100%;
-  height: 3rem; }
+  height: 3rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .footer p {
+    color: #e7ede7; }
+    .footer p a {
+      color: #e7ede7; }
