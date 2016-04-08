@@ -19,8 +19,20 @@ body {
   background-color: $primary-color-background;
 }
 
-// HOME
+.button {
+	margin-bottom: 0 !important;
+}
 
+.reveal-overlay {
+	background-color: rgba(10, 10, 10, 0.65);
+}
+.reveal {
+	overflow: hidden;
+	background-color: $primary-color-background;
+	border: none;
+}
+
+// HOME
 
 .home-intro {
 	.home-photo {
@@ -89,7 +101,7 @@ body {
 
 .home-show-more {
 	position: fixed;
-	top: 60%;
+	top: 25rem;
 	right: 10%;
 	width: 50px;
 	height: 50px;
@@ -171,16 +183,20 @@ body {
 	&__icon {
 		height: 50px;
 		width: 50px;
-		background-image: url("./assets/ic_navigate_next_white_24dp_2x.png");
+		background-image: url("./assets/ic_expand_more_black_24px.svg");
 		background-repeat: no-repeat;
-		transform: rotate(90deg);
+		transform: rotate(00deg);
 		background-position: center;
 		align-self: center;
 		&.active {
-			transform: rotate(270deg);
+			animation: 0.5s rotateExpandMore linear forwards;
+			//transform: rotate(180deg);
+		}
+		&:not(.active) {
+			animation: 0.5s rotateExpandLess linear forwards;
 		}
 	}
 	&__text {
-		color: darkgrey;
+		color: $primary-color-green;
 	}
 }

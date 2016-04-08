@@ -1,7 +1,6 @@
-<div class="topbar__header"
-     ng-click="topbar.showMenu = !topbar.showMenu"
-     ng-click="topbar.showMenu = !topbar.showMenu">
+<div class="topbar__header">
     <div id="nav-icon"
+         ng-click="topbar.showMenu = !topbar.showMenu"
          class="hide-for-medium"
          ng-class="{'open': topbar.showMenu}">
         <span></span>
@@ -9,7 +8,7 @@
         <span></span>
         <span></span>
     </div>
-    <div class="items show-for-medium-up">
+    <div class="items hide-for-small-only">
         <a ng-click="topbar.showMenuFunc(link.name)"
            ng-repeat="link in topbar.links track by $index"
            ng-class="{'active' : link.active}"
@@ -19,7 +18,7 @@
     </div>
 </div>
 
-<div class="topbar__menu-mobile hide-for-medium"
+<div class="topbar__menu-mobile hide-for-medium-up"
      ng-class="{'open': topbar.showMenu}">
     <ul class="nav-container__menu">
         <li class="nav-container__menu--item"

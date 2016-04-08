@@ -32,10 +32,10 @@
 		}
 
 		#nav-icon {
-			width: 50px;
+			width: 35px;
 			height: 35px;
 			position: relative;
-			margin: 10px 0 10px 10px;
+			margin: 16px 0 10px 10px;
 			//margin: 50px auto;
 			-webkit-transform: rotate(0deg);
 			-moz-transform: rotate(0deg);
@@ -68,13 +68,13 @@
 				top: 0px;
 			}
 			span:nth-child(2),span:nth-child(3) {
-				top: 18px;
+				top: 12px;
 			}
 			span:nth-child(4) {
-				top: 36px;
+				top: 24px;
 			}
 			&.open span:nth-child(1) {
-				top: 18px;
+				top: 12px;
 				width: 0%;
 				left: 50%;
 			}

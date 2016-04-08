@@ -1,6 +1,8 @@
 /**
  * Created by Kris on 3/21/2016.
  */
+
+
 var app = angular.module('app', [
     'ui.router'
 ]);
@@ -18,7 +20,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                     controllerAs: 'topbar'
                 },
 				'footer': {
-					templateUrl: 'app/views/footer.html'
+					templateUrl: 'app/views/footer.html',
+					controller: 'FooterCtrl',
+					controllerAs: 'footer'
 				}
             }
         })
@@ -94,9 +98,19 @@ app.controller('TopbarCtrl', function($scope, $window) {
     }
 
     function init() {
-       
+
     }
 
+});
+
+app.controller('FooterCtrl', function($scope) {
+	var vm = this;
+
+	init();
+
+	function init() {
+		$(document).foundation();
+	}
 });
 
 app.controller('MainCtrl', function($scope) {
@@ -107,7 +121,7 @@ app.controller('MainCtrl', function($scope) {
 	init();
 	
 	function init() {
-		
+
 	}
 
 });
@@ -164,78 +178,104 @@ app.controller('AboutCtrl', function($scope) {
 app.controller('PublicationsCtrl', function($scope) {
     var vm = this;
 
+	vm.goTo = goTo;
+
 	vm.publicationsList = [
 		{
 			id: 1,
 			title: "Mening og betydning i fællesskaber – et dramatisk arbejde.",
 			journal: "Kognition og Pædagogik, temanummer efterår",
-			year: "2015"
+			year: "2015",
+			isActive: false,
+			link: "http://www.maini.me/olearticles/"
 		},
 		{
 			id: 2,
 			title: "En Børne- og ungerådgivning og PPR – ”just in time”.",
 			journal: "Pædagogisk Psykologisk Tidskrift nr. 1. ",
-			year: "2015"
+			year: "2015",
+			isActive: true,
+			link: "http://www.maini.me/olearticles/EnBoerneUngeraadgivningogPPRjustintime.pdf"
 		},
 		{
 			id: 3,
 			title: "Liv i organisationer, affekt og intuition. Om Spinozas filosofi.",
 			journal: "Nordiske Udkast, nr. 1,",
-			year: "2013"
+			year: "2013",
+			isActive: false,
+			link: "http://www.maini.me/olearticles/"
 		},
 		{
 			id: 4,
 			title: "PPR, tværfagligt arbejde og jazz – en spejling af praksis.",
 			journal: "Pædagogisk psykologisk tidsskrift, Årg. 47, nr. 6",
-			year: "(2010)"
+			year: "(2010)",
+			isActive: true,
+			link: "http://www.maini.me/olearticles/PPRtvaerfagligtarbejdeogjazzenspejlingafpraksis.pdf"
 		},
 		{
 			id: 5,
 			title: "\"Just in time\": hvordan overgå diagnoserne og skabe viden på stedet.",
 			journal: "Pædagogisk psykologisk tidsskrift, Årg. 46, nr. 3",
-			year: "(2009)"
+			year: "(2009)",
+			isActive: true,
+			link: "http://www.maini.me/olearticles/Justintimehvordanovergådiagnoserneogskabevidenpåstedet.pdf"
 		},
 		{
 			id: 6,
 			title: "Læring og vanskeligheder i én skole - flere verdener.",
 			journal: "Relationer i skolen perspektiver på liv og læring. Redigeret af Tom Ritchie, Billesø & Baltzer",
-			year: "2006"
+			year: "2006",
+			isActive: false,
+			link: "http://www.maini.me/olearticles/"
 		},
 		{
 			id: 7,
 			title: "Værn i forhold: Relationer i kritiks psykologisk perspektiv",
 			journal: "Relationer i Psykologien. Redigeret af Tom Ritchie, Billesøe & Baltzer",
-			year: "2007"
+			year: "2007",
+			isActive: false,
+			link: "http://www.maini.me/olearticles/"
 		},
 		{
 			id: 8,
 			title: "Ledelse af PPR i bevægelse: ledelse af viden i praksis",
 			journal: "Psykologisk pædagogisk rådgivning, Årg. 44, nr. 5/6",
-			year: "(2007)"
+			year: "(2007)",
+			isActive: true,
+			link: "http://www.maini.me/olearticles/LedelseafPPRibevægelseledelseafvidenipraksis.pdf"
 		},
 		{
 			id: 9,
 			title: "Bevægelse, tænkning og organisation i professionelt arbejde",
 			journal: "Psyke & logos, Årg. 27, nr. 2",
-			year: "(2006)"
+			year: "(2006)",
+			isActive: true,
+			link: "http://www.maini.me/olearticles/Bevaegelsetaenkningogorganisationiprofessioneltarbejde.pdf"
 		},
 		{
 			id: 10,
 			title: "Projekt, kategori og intuition - om psykologisk viden i praksis",
 			journal: "Psykologisk pædagogisk rådgivning, Årg. 42, nr. 5/6",
-			year: "(2005)"
+			year: "(2005)",
+			isActive: true,
+			link: "http://www.maini.me/olearticles/Projektkategoriogintuitionompsykologiskvidenipraksis.pdf"
 		},
 		{
 			id: 11,
 			title: "Psykologiske kategorier i inklusiv praksis",
 			journal: "Psykologisk pædagogisk rådgivning, Årg. 41, nr. 5/6",
-			year: "(2004)"
+			year: "(2004)",
+			isActive: false,
+			link: "http://www.maini.me/olearticles/"
 		},
 		{
 			id: 12,
 			title: "Viden i praksis: om forskning som praksisudviklingsforskning",
 			journal: "Nordiske udkast, Årg. 31, nr. 1",
-			year: "(2003)"
+			year: "(2003)",
+			isActive: false,
+			link: "http://www.maini.me/olearticles/"
 		}
 	];
 
@@ -243,6 +283,17 @@ app.controller('PublicationsCtrl', function($scope) {
 
 	function init() {
 
+	}
+
+	function goTo(index) {
+		var go = vm.publicationsList[index].isActive;
+		if(go) {
+			var url = vm.publicationsList[index].link;
+
+			window.open(url,'_blank');
+		} else {
+			alert("Denne artikel er ikke tilgængelig endnu.");
+		}
 	}
 
 });
