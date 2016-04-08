@@ -3,13 +3,13 @@
         <div class="publications-item" ng-repeat="publication in publications.publicationsList track by $index">
             <div>
                 <div class="publications-item__title">
-                    <b>{{publication.title}}</b>
+                    <b ng-click="publications.goTo($index)">{{publication.title}}</b>
                 </div>
                 <div class="publications-item__info">
                     {{publication.journal}} {{publication.year}}
                 </div>
             </div>
-            <div class="publications-item__icon"></div>
+            <!--<div class="publications-item__icon"></div>-->
         </div>
     </div>
 </div>

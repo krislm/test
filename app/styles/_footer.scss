@@ -1,14 +1,35 @@
 .footer {
 	position: fixed;
+	@include breakpoint(small only) {
+	}
 	bottom: 0;
 	left: 0;
-	background-color: $primary-color-green;;
+	background-color: $primary-color-background;
 	width: 100%;
-	height: 3rem;
+	padding: 1rem;
+	height: auto;
 
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;//space-around;
 
+	&__container {
+		height: 4rem;
+		width: 100%;
+		background-color: $primary-color-green;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-content: center;
+		padding: 10px;
+		a {
+			color: $text-color !important;
+			border-color: $text-color !important;
+			&:hover {
+				border-color: $primary-color-highlight !important;
+			}
+		}
+	}
 	p {
 		color: $text-color;
 		a {

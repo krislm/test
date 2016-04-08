@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Praksis</title>
     <script>document.write('<base href="' + document.location + '" />');</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
     <link rel="stylesheet" href="dist/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.js"></script>
-    <!-- build:js /js/site.js -->
-    <!--<script src="node_modules/foundation-sites/dist/foundation.js"></script>-->
-    <!--<script src="node_modules/foundation-sites/js/foundation.accordion.js"></script>-->
-    <!-- endbuild -->
+
     <script src="app/app.js"></script>
 </head>
 
@@ -23,6 +17,10 @@
     <div ui-view="topbar"></div>
     <div id="content" ui-view="container"></div>
     <div ui-view="footer"></div>
+
+    <script type="text/javascript" src="dist/libs/jquery.js"></script>
+    <script type="text/javascript" src="dist/libs/foundation.js"></script>
 </body>
+
 
 </html>
