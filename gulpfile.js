@@ -5,6 +5,27 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
+var minify = require('gulp-minify');
+var cleanCSS = require('gulp-clean-css');
+
+gulp.task('compress', function() {
+	gulp.src('app/*.js')
+		.pipe(minify({
+			ext:{
+				src:'-debug.js',
+				min:'.js'
+			},
+			// exclude: ['tasks'],
+			ignoreFiles: ['.combo.js', '-min.js']
+		}))
+		.pipe(gulp.dest('dist'))
+});
+
+gulp.task('minify-css', function() {
+	return gulp.src('app/styles/main.css')
+		.pipe(cleanCSS())
+		.pipe(gulp.dest('dist'));
+});
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
@@ -24,7 +45,7 @@ gulp.task('sass', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('app/styles'))
         .pipe(browserSync.stream());
 });
 
@@ -32,9 +53,15 @@ gulp.task('sass:watch', function () {
     gulp.watch('app/**/*.scss', ['sass']);
 });
 
+gulp.task('copy-templates', function() {
+	return gulp.src('app/views/*.html')
+		.pipe(gulp.dest('dist/views'));
+})
+
 gulp.task('copy-assets', function () {
     return gulp.src('app/assets/')
         .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('default', ['serve', 'copy-assets']);
+gulp.task('build', ['compress', 'minify-css']);
