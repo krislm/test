@@ -56,7 +56,7 @@ gulp.task('sass:watch', function () {
 gulp.task('copy-templates', function() {
 	return gulp.src('app/views/*.html')
 		.pipe(gulp.dest('dist/views'));
-})
+});
 
 gulp.task('copy-assets', function () {
     return gulp.src('app/assets/')

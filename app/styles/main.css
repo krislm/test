@@ -3749,7 +3749,7 @@ body {
   @media screen and (max-width: 39.9375em) {
     .home-show-more {
       right: 5% !important;
-      top: 30rem !important; } }
+      top: 28rem !important; } }
   .home-show-more:hover {
     background-color: #b9cab8; }
   .home-show-more.expanded {
