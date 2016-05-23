@@ -30,7 +30,7 @@ gulp.task('js', function () {
 		.pipe(ngAnnotate())
 		.pipe(uglify())
 		.pipe(gulp.dest('dist'))
-})
+});
 
 gulp.task('minify-css', function() {
 	return gulp.src('app/styles/main.css')
