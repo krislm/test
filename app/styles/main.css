@@ -4050,7 +4050,7 @@ body {
   @media screen and (max-width: 39.9375em) {
     .home-show-more {
       right: 5% !important;
-      top: 28rem !important; } }
+      top: 22rem !important; } }
   .home-show-more:hover {
     background-color: #b9cab8; }
   .home-show-more.expanded {
@@ -4279,6 +4279,9 @@ body {
     .footer__container a {
       color: #e7ede7 !important;
       border-color: #e7ede7 !important; }
+      @media screen and (max-width: 39.9375em) {
+        .footer__container a {
+          padding-bottom: 0 !important; } }
       .footer__container a:hover {
         border-color: #b9cab8 !important; }
   .footer p {

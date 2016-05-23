@@ -1,6 +1,7 @@
 .footer {
 	position: fixed;
 	@include breakpoint(small only) {
+		//position: relative;
 	}
 	bottom: 0;
 	left: 0;
@@ -23,6 +24,9 @@
 		align-content: center;
 		padding: 10px;
 		a {
+			@include breakpoint(small only) {
+				padding-bottom: 0 !important;
+			}
 			color: $text-color !important;
 			border-color: $text-color !important;
 			&:hover {

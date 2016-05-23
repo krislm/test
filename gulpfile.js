@@ -52,7 +52,7 @@ gulp.task('serve', ['sass'], function() {
             index: "index.html"
         }
     });
-    gulp.watch("app/assets/*png", ['copy-assets']);
+    gulp.watch("app/assets/*.png", ['copy-assets']);
     gulp.watch("app/styles/*.scss", ['sass']);
     gulp.watch(["app/*.html", "app/app.js"]).on('change', browserSync.reload);
 });
