@@ -1,0 +1,43 @@
+@mixin whitespace($type: padding, $side: null, $size: null, $important: false) {
+	@if $size == null {
+		$size: $whitespace-medium;
+	} @else if $size == default {
+		$size: $whitespace-medium;
+	} @else if $size == small {
+		$size: $whitespace-small;
+	} @else if $size == medium {
+		$size: $whitespace-medium;
+	} @else if $size == large {
+		$size: $whitespace-large;
+	} @else if $size == xlarge {
+		$size: $whitespace-xlarge;
+	} @else if $size == xxlarge {
+		$size: $whitespace-xlarge * 2;
+	}
+
+	@if $important == false {
+		$important: null;
+	} @else if $important == null {
+		$important: null;
+	} @else {
+		$important: !important;
+	}
+
+	@if $side == null {
+		#{$type}: $size $important;
+	} @else if $side == horizontal {
+		#{$type}-left: $size $important;
+		#{$type}-right: $size $important;
+	} @else if $side == vertical {
+		#{$type}-top: $size $important;
+		#{$type}-bottom: $size $important;
+	} @else if $side == top {
+		#{$type}-top: $size $important;
+	} @else if $side == right {
+		#{$type}-right: $size $important;
+	} @else if $side == bottom {
+		#{$type}-bottom: $size $important;
+	} @else if $side == left {
+		#{$type}-left: $size $important;
+	}
+}

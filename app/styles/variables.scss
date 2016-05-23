@@ -11,3 +11,42 @@ $background-hover: #b9cab8;
 $reveal-border: none;
 
 $reveal-background: $primary-color-background;
+
+/*
+	White space
+*/
+$whitespace-small: rem-calc(5);
+$whitespace-medium: rem-calc(10);
+$whitespace-large: rem-calc(15);
+$whitespace-xlarge: rem-calc(20);
+
+/*
+	Font sizes
+*/
+$font-size-small: rem-calc(12);
+$font-size-medium: rem-calc(14);
+$font-size-large: rem-calc(16);
+$font-size-xlarge: rem-calc(18);
+$font-size-xxlarge: rem-calc(24);
+$font-size-xxxlarge: rem-calc(30);
+
+/*
+	Font weights
+*/
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 700;
+
+/*
+	Radii
+*/
+$radius-small: 2px;
+$radius-large: 4px;
+
+/*
+	Forms
+*/
+$checkbox-size: rem-calc(24);
+$checkbox-padding-left: rem-calc(15); // [$checkbox-size]|$checkbox-padding|label_text
+$checkbox-icon-size: rem-calc(24);

@@ -7,6 +7,9 @@ var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 var minify = require('gulp-minify');
 var cleanCSS = require('gulp-clean-css');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var ngAnnotate = require('gulp-ng-annotate')
 
 gulp.task('compress', function() {
 	gulp.src('app/*.js')
@@ -21,10 +24,26 @@ gulp.task('compress', function() {
 		.pipe(gulp.dest('dist'))
 });
 
+gulp.task('js', function () {
+	gulp.src(['app/app.js', 'app/**/*.js'])
+		.pipe(concat('app.js'))
+		.pipe(ngAnnotate())
+		.pipe(uglify())
+		.pipe(gulp.dest('dist'))
+})
+
 gulp.task('minify-css', function() {
 	return gulp.src('app/styles/main.css')
 		.pipe(cleanCSS())
 		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('serve-dist', function() {
+	browserSync.init({
+		server: {
+			index: "dist/index.html"
+		}
+	});
 });
 
 gulp.task('serve', ['sass'], function() {
@@ -64,4 +83,5 @@ gulp.task('copy-assets', function () {
 });
 
 gulp.task('default', ['serve', 'copy-assets']);
-gulp.task('build', ['compress', 'minify-css']);
+gulp.task('build', ['js', 'minify-css']);
+gulp.task('servedist', ['serve-dist']);
