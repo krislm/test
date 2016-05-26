@@ -1,0 +1,366 @@
+///////////////////////////////////
+//
+// PADDING
+//
+///////////////////////////////////
+
+/**
+	PADDING ALL SIDES
+**/
+
+.p-small {
+	@include whitespace($type: padding, $side: null, $size: small , $important: true);
+}
+
+.p,
+.p-medium {
+	@include whitespace($type: padding, $side: null , $important: true);
+}
+
+.p-large {
+	@include whitespace($type: padding, $side: null, $size: large , $important: true);
+}
+
+.p-xlarge {
+	@include whitespace($type: padding, $side: null, $size: xlarge , $important: true);
+}
+
+/**
+	PADDING VERTICAL
+**/
+
+.p-v-small {
+	@include whitespace($type: padding, $side: vertical, $size: small , $important: true);
+}
+
+.p-v,
+.p-v-medium {
+	@include whitespace($type: padding, $side: vertical , $important: true);
+}
+
+.p-v-large {
+	@include whitespace($type: padding, $side: vertical, $size: large , $important: true);
+}
+
+.p-v-xlarge {
+	@include whitespace($type: padding, $side: vertical, $size: xlarge , $important: true);
+}
+
+/**
+	PADDING HORIZONTAL
+**/
+
+.p-h-small {
+	@include whitespace($type: padding, $side: horizontal, $size: small , $important: true);
+}
+
+.p-h,
+.p-h-medium {
+	@include whitespace($type: padding, $side: horizontal , $important: true);
+}
+
+.p-h-large {
+	@include whitespace($type: padding, $side: horizontal, $size: large , $important: true);
+}
+
+.p-h-xlarge {
+	@include whitespace($type: padding, $side: horizontal, $size: xlarge , $important: true);
+}
+
+/**
+	PADDING TOP
+**/
+
+.p-t-small {
+	@include whitespace($type: padding, $side: top, $size: small , $important: true);
+}
+
+.p-t,
+.p-t-medium {
+	@include whitespace($type: padding, $side: top , $important: true);
+}
+
+.p-t-large {
+	@include whitespace($type: padding, $side: top, $size: large , $important: true);
+}
+
+.p-t-xlarge {
+	@include whitespace($type: padding, $side: top, $size: xlarge , $important: true);
+}
+
+/**
+	PADDING RIGHT
+**/
+
+.p-r-small {
+	@include whitespace($type: padding, $side: right, $size: small , $important: true);
+}
+
+.p-r,
+.p-r-medium {
+	@include whitespace($type: padding, $side: right , $important: true);
+}
+
+.p-r-large {
+	@include whitespace($type: padding, $side: right, $size: large , $important: true);
+}
+
+.p-r-xlarge {
+	@include whitespace($type: padding, $side: right, $size: xlarge , $important: true);
+}
+
+.p-r-xxlarge {
+	@include whitespace($type: padding, $side: right, $size: xxlarge , $important: true);
+}
+
+/**
+	PADDING BOTTOM
+**/
+
+.p-b-small {
+	@include whitespace($type: padding, $side: bottom, $size: small , $important: true);
+}
+
+.p-b,
+.p-b-medium {
+	@include whitespace($type: padding, $side: bottom , $important: true);
+}
+
+.p-b-large {
+	@include whitespace($type: padding, $side: bottom, $size: large , $important: true);
+}
+
+.p-b-xlarge {
+	@include whitespace($type: padding, $side: bottom, $size: xlarge , $important: true);
+}
+
+/**
+	PADDING LEFT
+**/
+
+.p-l-small {
+	@include whitespace($type: padding, $side: left, $size: small , $important: true);
+}
+
+.p-l,
+.p-l-medium {
+	@include whitespace($type: padding, $side: left , $important: true);
+}
+
+.p-l-large {
+	@include whitespace($type: padding, $side: left, $size: large , $important: true);
+}
+
+.p-l-xlarge {
+	@include whitespace($type: padding, $side: left, $size: xlarge , $important: true);
+}
+
+
+///////////////////////////////////
+//
+// MARGIN
+//
+///////////////////////////////////
+
+/**
+	MARGIN ALL SIDES
+**/
+
+.m-small {
+	@include whitespace($type: margin, $side: null, $size: small , $important: true);
+}
+
+.m,
+.m-medium {
+	@include whitespace($type: margin, $side: null , $important: true);
+}
+
+.m-large {
+	@include whitespace($type: margin, $side: null, $size: large , $important: true);
+}
+
+.m-xlarge {
+	@include whitespace($type: margin, $side: null, $size: xlarge , $important: true);
+}
+
+/**
+	MARGIN VERTICAL
+**/
+
+.m-v-small {
+	@include whitespace($type: margin, $side: vertical, $size: small , $important: true);
+}
+
+.m-v,
+.m-v-medium {
+	@include whitespace($type: margin, $side: vertical , $important: true);
+}
+
+.m-v-large {
+	@include whitespace($type: margin, $side: vertical, $size: large , $important: true);
+}
+
+.m-v-xlarge {
+	@include whitespace($type: margin, $side: vertical, $size: xlarge , $important: true);
+}
+
+/**
+	MARGIN HORIZONTAL
+**/
+
+.m-h-small {
+	@include whitespace($type: margin, $side: horizontal, $size: small , $important: true);
+}
+
+.m-h,
+.m-h-medium {
+	@include whitespace($type: margin, $side: horizontal , $important: true);
+}
+
+.m-h-large {
+	@include whitespace($type: margin, $side: horizontal, $size: large , $important: true);
+}
+
+.m-h-xlarge {
+	@include whitespace($type: margin, $side: horizontal, $size: xlarge , $important: true);
+}
+
+/**
+	MARGIN TOP
+**/
+
+.m-t-small {
+	@include whitespace($type: margin, $side: top, $size: small , $important: true);
+}
+
+.m-t,
+.m-t-medium {
+	@include whitespace($type: margin, $side: top , $important: true);
+}
+
+.m-t-large {
+	@include whitespace($type: margin, $side: top, $size: large , $important: true);
+}
+
+.m-t-xlarge {
+	@include whitespace($type: margin, $side: top, $size: xlarge , $important: true);
+}
+
+/**
+	MARGIN RIGHT
+**/
+
+.m-r-small {
+	@include whitespace($type: margin, $side: right, $size: small , $important: true);
+}
+
+.m-r,
+.m-r-medium {
+	@include whitespace($type: margin, $side: right , $important: true);
+}
+
+.m-r-large {
+	@include whitespace($type: margin, $side: right, $size: large , $important: true);
+}
+
+.m-r-xlarge {
+	@include whitespace($type: margin, $side: right, $size: xlarge , $important: true);
+}
+
+/**
+	MARGIN BOTTOM
+**/
+
+.m-b-small {
+	@include whitespace($type: margin, $side: bottom, $size: small , $important: true);
+}
+
+.m-b,
+.m-b-medium {
+	@include whitespace($type: margin, $side: bottom , $important: true);
+}
+
+.m-b-large {
+	@include whitespace($type: margin, $side: bottom, $size: large , $important: true);
+}
+
+.m-b-xlarge {
+	@include whitespace($type: margin, $side: bottom, $size: xlarge , $important: true);
+}
+
+.m-b-xxlarge {
+	@include whitespace($type: margin, $side: bottom, $size: xxlarge , $important: true);
+}
+
+/**
+	MARGIN LEFT
+**/
+
+.m-l-small {
+	@include whitespace($type: margin, $side: left, $size: small , $important: true);
+}
+
+.m-l,
+.m-l-medium {
+	@include whitespace($type: margin, $side: left , $important: true);
+}
+
+.m-l-large {
+	@include whitespace($type: margin, $side: left, $size: large , $important: true);
+}
+
+.m-l-xlarge {
+	@include whitespace($type: margin, $side: left, $size: xlarge , $important: true);
+}
+
+// Retarderde resets... ikke færdig implementeret, det er simpelthent for langt ude så det gider jeg ikke. - DHNI
+.no-m-t {
+	margin-top: 0 !important;
+}
+.no-m-b {
+	margin-bottom: 0 !important;
+}
+
+.no-p-l {
+	padding-left: 0 !important;
+}
+.no-p-r {
+	padding-right: 0 !important;
+}
+
+.no-p-small {
+	@media #{$small-only} {
+		padding: 0 !important;
+	}
+}
+.no-p-medium-up {
+	@media #{$medium-up} {
+		padding: 0 !important;
+	}
+}
+.no-m-t-medium-up {
+	@media #{$medium-up} {
+		margin-top: 0 !important;
+	}
+}
+.no-m-b-medium-up {
+	@media #{$medium-up} {
+		margin-bottom: 0 !important;
+	}
+}
+.no-m-l-small {
+	@media #{$small-only} {
+		margin-left: 0 !important;
+	}
+}
+
+.m-b-large-small {
+	@media #{$small-only} {
+		margin-bottom: $whitespace-large !important;
+	}
+}
+.m-b-small-small {
+	@media #{$small-only} {
+		margin-bottom: $whitespace-small !important;
+	}
+}

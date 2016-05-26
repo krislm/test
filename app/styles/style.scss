@@ -8,6 +8,7 @@ p, a, div, h1, h2, h3, h4, h5, h6 {
 #content {
 		@include breakpoint(small) {
 			padding-top: 5rem;
+			padding-bottom: 6rem !important;
 		}
 	  @include breakpoint(large) {
 		margin-top: 5rem;
@@ -63,6 +64,9 @@ body {
 	background-position: center;
 	background-size: contain;
 	background-color: grey;
+
+	box-shadow: 6px 4px 13px #888888;
+	border: solid 1px #888888;
 	@include breakpoint(small only) {
 		height: 200px;
 		width: 200px;
@@ -84,17 +88,21 @@ body {
 
 @keyframes rotateExpandMore {
 	from {
+		opacity: 1;
 		transform: rotate(0deg);
 	}
 	to {
+		opacity: 0.5;
 		transform: rotate(180deg);
 	}
 }
 @keyframes rotateExpandLess {
 	from {
+		opacity: 0.5;
 		transform: rotate(-180deg);
 	}
 	to {
+		opacity: 1;
 		transform: rotate(0deg);
 	}
 }
@@ -111,6 +119,13 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+
+
+	@include breakpoint(small only) {
+		right: 5% !important;
+		top: 15rem !important;
+	}
+
 	//transition: .3s ease-in-out;
 	&:hover {
 		background-color: $primary-color-highlight;
@@ -169,7 +184,6 @@ body {
 		justify-content: space-between;
 		cursor: pointer;
 		&:hover {
-			//background-color: darkgrey;
 		}
 	}
 	&__title {
@@ -190,7 +204,6 @@ body {
 		align-self: center;
 		&.active {
 			animation: 0.5s rotateExpandMore linear forwards;
-			//transform: rotate(180deg);
 		}
 		&:not(.active) {
 			animation: 0.5s rotateExpandLess linear forwards;
